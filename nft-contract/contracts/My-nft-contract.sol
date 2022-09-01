@@ -121,15 +121,22 @@ contract DemoNft is ERC721 {
         Token[] memory tokensOfAccount = new Token[](countOfUserTokens);
         uint256 indexOfTokensOfAccount = 0;
         for (uint i = 0; i < tokens.length; i++) if (_account == tokens[i].owner && keccak256(bytes(tokens[i].tokenSymbol)) != keccak256(bytes(""))) {
-          tokensOfAccount[indexOfTokensOfAccount] = tokens[i];
-          indexOfTokensOfAccount++;
+            tokensOfAccount[indexOfTokensOfAccount] = tokens[i];
+            indexOfTokensOfAccount++;
         }
 
         return tokensOfAccount;
     }
 
     function getNftSymbols () public view returns (string[] memory) {
-        return ["FOX", "KIN", "JAI", "WIN"];
+        string[] memory symbols = new string[](4);
+        
+        symbols[0] = "FOX";
+        symbols[1] = "KIN";
+        symbols[2] = "JAI";
+        symbols[3] = "WIN";
+
+        return symbols;
     }
 
     function getWinnerNtfSymbol () public view returns(string memory) {
@@ -137,7 +144,7 @@ contract DemoNft is ERC721 {
     }
 
     function getTokensInfo (string memory _symbol) public view returns(TokenInfo memory) {
-      return tokensInfo[_symbol];
+        return tokensInfo[_symbol];
     }
 
     function getWinner () public view returns (address) {
