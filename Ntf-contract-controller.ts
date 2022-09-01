@@ -75,6 +75,16 @@ export class NftContractController {
     }));
   }
 
+  async getNftSymbols(): Promise<string[]> {
+    const response = await this.contract.getNftSymbols();
+    return response;
+  }
+
+  async getWinnerNtfSymbol(): Promise<string> {
+    const response = await this.contract.getWinnerNtfSymbol();
+    return response;
+  }
+
   async getTokenInfo(tokenName: TokenSymbols): Promise<TokenInfo> {
     const rawTokenInfo: any = await this.contract?.getTokensInfo(tokenName);
 

@@ -128,6 +128,14 @@ contract DemoNft is ERC721 {
         return tokensOfAccount;
     }
 
+    function getNftSymbols () public view returns (string[] memory) {
+        return ["FOX", "KIN", "JAI", "WIN"];
+    }
+
+    function getWinnerNtfSymbol () public view returns(string memory) {
+        return "WIN";
+    }
+
     function getTokensInfo (string memory _symbol) public view returns(TokenInfo memory) {
       return tokensInfo[_symbol];
     }
