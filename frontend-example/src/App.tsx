@@ -33,7 +33,7 @@ function App() {
     <div>
       {tokenInfo ? (
         <div>
-          <img src={`http://localhost:3010/${tokenInfo.imageUrl}`} alt="" />
+          <img src={`http://localhost:3010/${tokenInfo.imageName}`} alt="" />
           <br />
           <span>
             {tokenInfo.name} - [ {tokenInfo.symbol} ] ({" "}

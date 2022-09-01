@@ -16,7 +16,7 @@ contract DemoNft is ERC721 {
     struct TokenInfo {
         string name;
         string symbol;
-        string imageUrl;
+        string imageName;
         uint8 availableQuantity;
         uint256 priceInEthers;
     }
@@ -32,7 +32,7 @@ contract DemoNft is ERC721 {
 
 
     constructor() ERC721("DemoNft", "DEM") {
-        // name, symbol, imageUrl, availableQuantity, priceInEthers
+        // name, symbol, imageName, availableQuantity, priceInEthers
         tokensInfo["FOX"] = TokenInfo("Fox nft", "FOX", "fox-nft.png", 2, 5 ether);
         tokensInfo["KIN"] = TokenInfo("Kindred nft", "KIN", "kindred-nft.png", 10, 4 ether);
         tokensInfo["JAI"] = TokenInfo("Jaina nft", "JAI", "jaina-nft.png", 10, 7 ether);
@@ -126,6 +126,14 @@ contract DemoNft is ERC721 {
         }
 
         return tokensOfAccount;
+    }
+
+    function getNftSymbols () public view returns (string[] memory) {
+        return ["FOX", "KIN", "JAI", "WIN"];
+    }
+
+    function getWinnerNtfSymbol () public view returns(string memory) {
+        return "WIN";
     }
 
     function getTokensInfo (string memory _symbol) public view returns(TokenInfo memory) {
