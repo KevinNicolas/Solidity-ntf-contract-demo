@@ -5,7 +5,7 @@ export type TokenSymbols = "FOX" | "KIN" | "JAI" | "WIN";
 export interface TokenInfo {
   name: string;
   symbol: string;
-  imageUrl: string;
+  imageName: string;
   priceInEthers: number;
   availableQuantity: number;
 }
@@ -80,7 +80,7 @@ export class NftContractController {
 
     return {
       availableQuantity: rawTokenInfo.availableQuantity,
-      imageUrl: rawTokenInfo.imageUrl,
+      imageName: rawTokenInfo.imageName,
       name: rawTokenInfo.name,
       priceInEthers: this.#parseHexToEthers(rawTokenInfo.priceInEthers._hex),
       symbol: rawTokenInfo.symbol,
