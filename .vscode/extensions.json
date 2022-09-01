@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "exodiusstudios.comment-anchors",
+    "usernamehw.errorlens",
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode",
+    "juanblanco.solidity",
+    "dsznajder.es7-react-js-snippets"
+  ]
+}

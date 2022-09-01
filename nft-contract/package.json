@@ -1,0 +1,14 @@
+{
+  "name": "nft-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start-ganache": "ganache-cli",
+    "build": "truffle build",
+    "deploy-contract": "truffle migrate"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "SOF-Demo",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "gitUsername": "user",
+      "gitEmail": "mail",
+      "sshFileName": "id_rsa"
+    }
+  },
+  "shutdownAction": "stopContainer",
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "extensions": [
+    "ExodiusStudios.comment-anchors",
+    "usernamehw.errorlens",
+    "wheredoesyourmindgo.gruvbox-concoctis",
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode",
+    "christian-kohler.path-intellisense",
+    "2gua.rainbow-brackets",
+    "JuanBlanco.solidity",
+    "dsznajder.es7-react-js-snippets"
+  ]
+}
